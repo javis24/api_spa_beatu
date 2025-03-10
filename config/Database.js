@@ -8,7 +8,7 @@ const db = new Sequelize(
     {
         host: process.env.MYSQL_HOST,
         dialect: 'mysql',
-        dialectModule: mysql2, // Usa el driver importado
+        dialectModule: mysql2, 
         logging: console.log,
     }
 );
