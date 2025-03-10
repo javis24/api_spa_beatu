@@ -2,7 +2,7 @@ import express from 'express';
 import cors from 'cors';
 import session from 'express-session';
 import dotenv from 'dotenv';
-import db from './db.js';
+import db from './config/Database.js';
 import UserRoute  from './routes/UserRoute.js';
 import PacienteRoute from './routes/PacienteRoute.js';
 
