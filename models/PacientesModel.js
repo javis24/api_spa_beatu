@@ -1,6 +1,8 @@
 import db from '../config/Database.js'; 
-import { DataTypes } from 'sequelize';
+import { Sequelize } from 'sequelize';
 import Users from './UserModel.js'; 
+
+const { DataTypes } = Sequelize;
 
 const Pacientes = db.define('paciente', {
     uuid: {

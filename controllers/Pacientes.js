@@ -1,8 +1,8 @@
-import Pacientes from "../models/PacientesModel";
+import Pacientes from "../models/PacientesModel.js";
 
 export const getPaciente = async (req, res) => {}
 
-export const getPacienteById = async (req, res) => {}
+export const getPacientesById = async (req, res) => {}
 
 export const createPaciente = async (req, res) => {}
 
