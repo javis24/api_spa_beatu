@@ -1,5 +1,7 @@
 import { Sequelize } from 'sequelize';
-import mysql2 from 'mysql2'; // Importa el driver mysql2
+import mysql2 from 'mysql2';
+import dotenv from 'dotenv';
+dotenv.config();
 
 const db = new Sequelize(
     process.env.MYSQL_DATABASE,
@@ -8,7 +10,7 @@ const db = new Sequelize(
     {
         host: process.env.MYSQL_HOST,
         dialect: 'mysql',
-        dialectModule: mysql2, 
+        dialectModule: mysql2, // Usa mysql2 importado
         logging: console.log,
     }
 );

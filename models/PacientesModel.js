@@ -6,7 +6,7 @@ const { DataTypes } = Sequelize;
 
 const Pacientes = db.define('paciente', {
     uuid: {
-        type: DataTypes.UUIDV4,
+        type: DataTypes.UUID,
         defaultValue: DataTypes.UUIDV4,
         allowNull: false,
         primaryKey: true, 

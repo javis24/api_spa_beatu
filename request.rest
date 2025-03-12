@@ -1,0 +1,165 @@
+POST http://localhost:5000/users
+Content-Type: application/json
+
+{
+  "name": "secretaria",
+  "email": "secretaria@secretaria.com",
+  "password": "secretaria",
+  "confPassword": "secretaria",
+  "role": "secretary"
+
+}
+
+###
+// todos los usuarios
+GET http://localhost:5000/users
+
+###
+// usuario por id
+GET http://localhost:5000/users/34a262ad-5e64-4dec-9591-ea70cccb0b57
+
+
+###
+// usuario actualizado
+PATCH  http://localhost:5000/users/34a262ad-5e64-4dec-9591-ea70cccb0b57
+Content-Type: application/json
+
+{
+  "name": "paciente",
+    "email": "paciente@paciente.com",
+    "password": "paciente",
+    "confPassword": "paciente",
+    "role": "secretary"
+
+}
+
+
+###
+// eliminar usuario por id
+DELETE  http://localhost:5000/users/8bb4209f-a13c-466d-b1f0-086c934251e0
+
+
+###
+///Login
+POST http://localhost:5000/login
+Content-Type: application/json
+
+{
+ 
+  "email": "admin@admin.com",
+  "password": "admin"
+
+}
+
+###
+// datos propios
+GET http://localhost:5000/me
+
+###
+///Logout
+DELETE  http://localhost:5000/logout
+
+
+###
+///todos los pacientes
+GET http://localhost:5000/pacientes
+
+
+###
+///un pacientes
+GET http://localhost:5000/pacientes/b7f5c4d4-4a19-41c5-8d84-668b67449cc0
+
+
+
+###
+POST http://localhost:5000/pacientes
+Content-Type: application/json
+
+{
+  "name": "Rene Alberto",
+  "address": "Sta rosa 368", 
+  "phoneNumber": "8711212324",
+  "email": "renealberto@email.com", 
+  "evaluationDate": "11-03-2025",
+  "age": "32", 
+  "height": "1.58", 
+  "unwantedGain": "25",
+  "pathologies": "s/p"
+}
+
+
+###
+///actualizar paciente
+PATCH http://localhost:5000/pacientes/b7f5c4d4-4a19-41c5-8d84-668b67449cc0
+Content-Type: application/json
+
+{
+  "name": "Rene Alberto Update",
+  "address": "Sta rosa 368", 
+  "phoneNumber": "8711212324",
+  "email": "renealberto@email.com", 
+  "evaluationDate": "11-03-2025",
+  "age": "32", 
+  "height": "1.58", 
+  "unwantedGain": "25",
+  "pathologies": "s/p"
+}
+
+###
+DELETE http://localhost:5000/pacientes/b7f5c4d4-4a19-41c5-8d84-668b67449cc0
+
+
+###crear metrica-salud
+POST http://localhost:5000/metricas-salud
+Content-Type: application/json
+
+{
+       "pacienteId": 2, 
+        "weight": 70.5,
+        "fatPercentage": 20.0,
+        "muscleKg": 55.0,
+        "bodyWater": 60.0,
+        "phy": 80,
+        "muscle": 75.0,
+        "metabolicAge": 28,
+        "heartRate": 72,
+        "boneKg": 3.5,
+        "visceralFat": 5.0,
+        "bmi": 23.0,
+        "hip": 95.0,
+        "arms": 30.0,
+        "thighs": 55.0,
+        "calves": 38.0,
+        "chest": 100.0,
+        "waist": 80.0,
+        "abdomen": 85.0,
+        "kcla": 2000.0
+}
+
+
+###
+///ver metrica-salud
+GET http://localhost:5000/metricas-salud/
+
+###crear tratamiento estetico
+POST http://localhost:5000/tratamientos-esteticos
+Content-Type: application/json
+
+{
+       "pacienteId": 2, 
+        "cavitation": 1,
+        "radioFrequency": 1,
+        "lipoLaser": 0,
+        "vacuum": 1,
+        "gluteCups": 0,
+        "woodTherapy": 1,
+        "lymphaticDrainage": 0,
+        "detox": 1,
+        "mesotherapy": 0,
+        "passiveGym": 1
+}
+
+
+###
+///ver  tratamientos-esteticos
+GET http://localhost:5000/tratamientos-esteticos
